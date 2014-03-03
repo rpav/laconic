@@ -3,7 +3,7 @@
   (:export
 
    ;; list
-   #:akey #:aval #:alist-bind
+   #:akey #:aval #:alist-bind #:alist
 
    ;; string
    #:substr #:string+))

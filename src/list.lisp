@@ -24,3 +24,8 @@ lookups."
                            `(,x (aval ,(make-keyword x) ,alist))))
                      vars))
        ,@body)))
+
+(defun alist (&rest plist)
+  (loop for car in plist by #'cddr
+        for cdr in (cdr plist) by #'cddr
+        collect (cons car cdr)))
