@@ -16,4 +16,5 @@
   :components
   ((:file "package")
    (:file "list")
-   (:file "string")))
+   (:file "string")
+   (:file "asdf")))
