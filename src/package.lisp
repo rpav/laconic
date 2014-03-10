@@ -6,4 +6,7 @@
    #:akey #:aval #:alist-bind #:alist
 
    ;; string
-   #:substr #:string+))
+   #:substr #:string+
+
+   ;; asdf
+   #:asdf-path))
