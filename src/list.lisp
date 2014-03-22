@@ -29,3 +29,17 @@ lookups."
   (loop for car in plist by #'cddr
         for cdr in (cdr plist) by #'cddr
         collect (cons car cdr)))
+
+(defun alist* (&rest plist)
+  "Like `ALIST`, except the final element becomes the `CDR` of the alist,
+much like `LIST*`"
+  (let* ((head (cons nil nil)))
+    (loop for plist-cons on plist by #'cddr
+          as cons = head then (cdr cons)
+          do (when (cddr plist-cons)
+               (setf (car cons) (cons (car plist-cons) (cadr plist-cons)))
+               (setf (cdr cons) (if (cdddr plist-cons)
+                                    (cons nil nil)
+                                    (caddr plist-cons)))))
+    head))
+

@@ -37,5 +37,7 @@ operations.
   values to variables.  Bindings may be either `(VAR KEY)` or `VAR`,
   which will look for the *keyword* with the same symbol-name as
   `VAR`, e.g., `:foo` for `foo`.
-* `alist &rest VALUES`: Like `LIST`, but returns an alist; e.g.,
+* `alist &rest PLIST`: Like `LIST`, but returns an alist; e.g.,
   `(alist :x 1 y 2) => ((:x . 1) (:y . 2))`
+* `alist* &rest PLIST`: Like `ALIST`, but the final element becomes
+  the final CDR, like `LIST*`.
