@@ -11,6 +11,6 @@
                      (unless source
                        (unintern symbol)
                        (error "Symbol not found: WITH-~A~%Form: ~S" name form))
-                     `(,symbol ,@params ,(one-form (cdr head) body)))
+                     `((,symbol ,@params ,@(one-form (cdr head) body))))
                    body))))
-    (one-form with-forms body)))
+    (car (one-form with-forms body))))

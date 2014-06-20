@@ -12,4 +12,7 @@
    #:get-real-time-seconds #:get-run-time-seconds
 
    ;; asdf
-   #:asdf-path))
+   #:asdf-path
+
+   ;; with
+   #:with))
