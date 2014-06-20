@@ -8,5 +8,8 @@
    ;; string
    #:substr #:string+
 
+   ;; time
+   #:get-real-time-seconds #:get-run-time-seconds
+
    ;; asdf
    #:asdf-path))
