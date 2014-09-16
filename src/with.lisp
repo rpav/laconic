@@ -7,9 +7,8 @@
                     (params (cdr form)))
                (if form
                    (multiple-value-bind (symbol source)
-                       (intern (concatenate 'string "WITH-" (string name)))
+                       (find-symbol (concatenate 'string "WITH-" (string name)))
                      (unless source
-                       (unintern symbol)
                        (error "Symbol not found: WITH-~A~%Form: ~S" name form))
                      `((,symbol ,@params ,@(one-form (cdr head) body))))
                    body))))
