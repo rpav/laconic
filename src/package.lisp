@@ -6,7 +6,7 @@
    #:akey #:aval #:alist-bind #:alist #:alist*
 
    ;; string
-   #:substr #:string+
+   #:substr #:string+ #:string-join
 
    ;; time
    #:get-real-time-seconds #:get-run-time-seconds
