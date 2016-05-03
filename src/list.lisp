@@ -13,7 +13,7 @@
   (setf (car (rassoc val alist :key key :test test)) v))
 
 (defun (setf aval) (v val alist &key (key 'identity) (test 'eq))
-  (setf (cdr (rassoc val alist :key key :test test)) v))
+  (setf (cdr (assoc val alist :key key :test test)) v))
 
 (defmacro alist-bind ((&rest vars) alist &body body)
   "Search `ALIST` and bind values to `VARS`, which may be a a list in
