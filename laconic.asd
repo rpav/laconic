@@ -9,7 +9,7 @@
   :license "BSD-2-Clause"
   :version "0.0"
 
-  :depends-on (:alexandria)
+  :depends-on (:alexandria :defpackage-plus)
   :pathname "src"
   :serial t
 

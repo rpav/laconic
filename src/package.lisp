@@ -1,6 +1,8 @@
-(defpackage :laconic
+(in-package :defpackage+-user-1)
+
+(defpackage+ :laconic
   (:use #:cl #:alexandria)
-  (:export
+  (:export-only
 
    ;; list
    #:akey #:aval #:alist-bind #:alist #:alist*
